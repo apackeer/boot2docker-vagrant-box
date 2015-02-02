@@ -37,7 +37,7 @@
     "post-processors": [{
         "type": "vagrant",
         "include": ["boot2docker-vagrant.iso"],
-        "vagrantfile_template": "vagrantfile.tpl",
+        "vagrantfile_template": "./vagrantfile.tpl",
         "output": "boot2docker_{{.Provider}}.box"
     }]
 }

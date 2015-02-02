@@ -12,6 +12,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Every Vagrant virtual environment requires a box to build off of.
   config.vm.box = "chef/ubuntu-12.04-i386"
 
+  config.vm.provider "vmware_fusion" do |v|
+    v.vmx["memsize"] = "1536"
+  end
+
   config.vm.provider "virtualbox" do |v|
     v.customize ["modifyvm", :id, "--memory", "1500"]
   end
