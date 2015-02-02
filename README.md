@@ -8,11 +8,11 @@ most minimal Docker environment possible.
 ## Usage
 
 The box is available on
-[Vagrant Cloud](https://vagrantcloud.com/mitchellh/boot2docker), making
+[Hashicorp Atlas](https://atlas.hashicorp.com/apackeer/boxes/boot2docker), making
 it very easy to use it:
 
-    $ vagrant init mitchellh/boot2docker
-    $ vagrant up
+    $ vagrant init apackeer/boot2docker
+    $ vagrant up --provider=vmware_fusion
 
 If you want the actual box file, you can download it from the
 [releases page](https://github.com/apackeer/boot2docker-vagrant-box/releases).
