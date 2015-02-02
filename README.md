@@ -15,14 +15,14 @@ it very easy to use it:
     $ vagrant up
 
 If you want the actual box file, you can download it from the
-[releases page](https://github.com/mitchellh/boot2docker-vagrant-box/releases).
+[releases page](https://github.com/apackeer/boot2docker-vagrant-box/releases).
 
 On OS X, to use the docker client, follow the directions here:
 http://docs.docker.io/installation/mac/#docker-os-x-client (you'll need to
 export `DOCKER_HOST`). You should then be able to to run `docker version` from
 the host.
 
-![Vagrant Up Boot2Docker](https://raw.github.com/mitchellh/boot2docker-vagrant-box/master/readme_image.gif)
+![Vagrant Up Boot2Docker](https://raw.github.com/apackeer/boot2docker-vagrant-box/master/readme_image.gif)
 
 ## Building the Box
 
@@ -39,13 +39,13 @@ To build the box, first install the following prerequisites:
 Then follow the steps:
 
 ```
-$ vagrant up
+$ vagrant up --provider=vmware_fusion
 ...
 $ vagrant ssh -c 'cd /vagrant && sudo ./build-iso.sh'
 ...
 $ vagrant destroy --force
 ...
-$ packer build template.json
+$ packer build --only vmware-iso template.json
 ...
 ```
 
